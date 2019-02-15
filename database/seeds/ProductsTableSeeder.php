@@ -32,7 +32,7 @@ class ProductsTableSeeder extends Seeder
             // attention il n'y en a que 9 en tout différentes
 
             $link = str_random(12) . '.jpg'; // donner un nom aleatoire à l'image // hash de lien pour la sécurité (injection de scripts protection)
-            $file = file_get_contents('https://placeimg.com/300/300/people/grayscale');  // flux
+            $file = file_get_contents('https://placeimg.com/300/300/people/grayscale');  // flux avec l'adresse des liens des photos 
             Storage::disk('local')->put($link, $file); // disque pour sauvegarder les images sur le disque local
 
             $product->update([
